@@ -6,3 +6,31 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem
+}
+
+/* ==========================================================================
+   Squares
+   ========================================================================== */
+
+.square-colors-selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.box-color {
+  text-align: center;
+}
+
+.box-color__square {
+  margin-bottom: .5rem;
+  width: 100px;
+  height: 100px;
+  background-color: var(--square-color-bg, transparent);
+}
+

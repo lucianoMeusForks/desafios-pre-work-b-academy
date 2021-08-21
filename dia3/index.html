@@ -7,9 +7,31 @@
     <title>Dia 3</title>
   </head>
   <body>
-    <input data-js="input-person" type="text" name="name_person" placeholder="Digite seu nome aqui" />
+    <div class="wrap">
+      <div>
+        <input data-js="input-person" autofocus type="text" name="name_person" placeholder="Digite seu nome aqui" />
 
-    <p data-js="exit-value-name"></p>
+        <form action="">
+          <fieldset>
+            <legend>Escolher cor:</legend>
+            <select name="" data-js="color-select" multiple>
+              <option value="#000">Brain black</option>
+              <option value="#f36">Brain rosa</option>
+              <option value="rebeccapurple">Rebeca</option>
+              <option value="darkcyan">Rebeca Purple</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </select>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <p data-js="exit-value-name"></p>
+        <div class="square-colors-selected" data-js="exit-colors"></div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
