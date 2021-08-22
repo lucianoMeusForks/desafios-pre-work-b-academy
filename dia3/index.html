@@ -25,10 +25,60 @@
             </select>
           </fieldset>
         </form>
+
+        <div>
+          <form action="" data-js="formcar">
+            <fieldset>
+              <legend>Cadastre seu carro</legend>
+              <div>
+                <label for="image">Imagem</label>
+                <input id="image" type="text" name="image" data-js='typeimage'>
+
+              </div>
+              <div>
+                <label for="brand-model">Marca / Modelo</label>
+                <input id="brand-model" type="text" name="brandModel" data-js='typetxt'>
+              </div>
+
+              <div>
+                <label for="year">Ano</label>
+                <input id="year" type="number" name="year" data-js='typetxt'>
+              </div>
+
+              <div>
+                <label for="plate">Placa</label>
+                <input id="plate" type="text" name="plate" data-js='typetxt'>
+              </div>
+
+              <div>
+                <label for="color">Cor</label>
+                <input id="color" type="text" name="color" data-js='typecolor'>
+              </div>
+
+              <div>
+                <button type="submit">CADASTRAR</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
       <div>
         <p data-js="exit-value-name"></p>
         <div class="square-colors-selected" data-js="exit-colors"></div>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Imagem</th>
+              <th>Marca / Modelo</th>
+              <th>Ano</th>
+              <th>Placa</th>
+              <th>Cor</th>
+            </tr>
+          </thead>
+
+          <tbody data-js="table">
+          </tbody>
+        </table>
       </div>
     </div>
 
