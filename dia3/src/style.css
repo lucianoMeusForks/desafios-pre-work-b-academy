@@ -1,17 +1,116 @@
-#app {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fff;
 }
 
 .wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem
+  gap: 2rem;
+  padding: 2rem;
 }
+
+.wrap-exit {
+  padding: 1.25rem;
+  min-height: 3.125rem;
+  margin-bottom: 1rem;
+  border: solid 1px #ccc;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  background-color: var(--form-btn-bg,#ff3366);
+  transition: background-color ease, .3s;
+}
+
+.btn:hover {
+  --form-btn-bg: #000;
+
+  cursor: pointer;
+  transition: background-color ease, .15s;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: .625rem 0;
+}
+
+.table td {
+  padding: .5rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Forms elements
+   ========================================================================== */
+.form-fieldset {
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.form-legend {
+  margin-bottom: .8rem;
+  font-size: 1.375rem;
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  margin-bottom: .8rem;
+}
+
+.form-label {
+  color: #777;
+}
+
+.form-element {
+  display: block;
+  width: 100%;
+  padding: .625rem .75rem;
+  font-size: 1rem;
+  color: var(--forme-cl,#000);
+  border: solid 1px var(--forme-bdc, #ccc);
+  border-radius: .25rem;
+}
+
+.form-element:focus {
+  --forme-bdc: #000;
+  --forme-cl: #ff3366;
+}
+
+.btn--form {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+
+/* ==========================================================================
+   Exit name
+   ========================================================================== */
+
+.exit-name {
+  margin-bottom: 1rem;
+}
+
+.exit-name__lead {
+  margin-bottom: .5rem;
+  font-size: 1.125rem;
+}
+
 
 /* ==========================================================================
    Squares
@@ -20,7 +119,7 @@
 .square-colors-selected {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 1.25rem .625rem;
 }
 
 .box-color {
@@ -31,6 +130,23 @@
   margin-bottom: .5rem;
   width: 100px;
   height: 100px;
+  border-radius: .5rem;
   background-color: var(--square-color-bg, transparent);
 }
 
+.box-color__btn {
+  padding: .5rem;
+}
+
+/* ==========================================================================
+   Car
+   ========================================================================== */
+
+.boxcolor-car {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: .5rem;
+  background-color: var(--boxcolor-car-bgc);
+}
