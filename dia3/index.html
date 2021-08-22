@@ -7,14 +7,21 @@
     <title>Dia 3</title>
   </head>
   <body>
+    <!-- wrap -->
     <div class="wrap">
+      <!-- col -->
       <div>
-        <input data-js="input-person" autofocus type="text" name="name_person" placeholder="Digite seu nome aqui" />
+        <form action="">
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Formatando nome:</legend>
+            <input data-js="input-person" autofocus type="text" name="name_person" placeholder="Digite seu nome aqui" class="form-element" />
+          </fieldset>
+        </form>
 
         <form action="">
-          <fieldset>
-            <legend>Escolher cor:</legend>
-            <select name="" data-js="color-select" multiple>
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Selecione as cores:</legend>
+            <select name="" data-js="color-select" multiple class="form-element">
               <option value="#000">Brain black</option>
               <option value="#f36">Brain rosa</option>
               <option value="rebeccapurple">Rebeca</option>
@@ -26,46 +33,58 @@
           </fieldset>
         </form>
 
-        <div>
-          <form action="" data-js="formcar">
-            <fieldset>
-              <legend>Cadastre seu carro</legend>
-              <div>
-                <label for="image">Imagem</label>
-                <input id="image" type="text" name="image" data-js='typeimage'>
+        <form action="" data-js="formcar">
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Cadastre seu carro</legend>
+            <div class="form-row">
+              <label class="form-label" for="image">Imagem</label>
+              <input id="image" type="text" name="image" data-js='typeimage' class="form-element">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="brand-model">Marca / Modelo</label>
+              <input id="brand-model" type="text" name="brandModel" data-js='typetxt' class="form-element">
+            </div>
 
-              </div>
-              <div>
-                <label for="brand-model">Marca / Modelo</label>
-                <input id="brand-model" type="text" name="brandModel" data-js='typetxt'>
-              </div>
+            <div class="form-row">
+              <label class="form-label" for="year">Ano</label>
+              <input id="year" type="number" name="year" data-js='typetxt' class="form-element">
+            </div>
 
-              <div>
-                <label for="year">Ano</label>
-                <input id="year" type="number" name="year" data-js='typetxt'>
-              </div>
+            <div class="form-row">
+              <label class="form-label" for="plate">Placa</label>
+              <input id="plate" type="text" name="plate" data-js='typetxt' class="form-element">
+            </div>
 
-              <div>
-                <label for="plate">Placa</label>
-                <input id="plate" type="text" name="plate" data-js='typetxt'>
-              </div>
+            <div class="form-row">
+              <label class="form-label" for="color">Cor</label>
+              <input id="color" type="text" name="color" data-js='typecolor' class="form-element">
+            </div>
 
-              <div>
-                <label for="color">Cor</label>
-                <input id="color" type="text" name="color" data-js='typecolor'>
-              </div>
-
-              <div>
-                <button type="submit">CADASTRAR</button>
-              </div>
-            </fieldset>
-          </form>
-        </div>
+            <div>
+              <button class="btn btn--form" type="submit">CADASTRAR</button>
+            </div>
+          </fieldset>
+        </form>
       </div>
+      <!-- / col -->
+
+      <!-- col -->
       <div>
-        <p data-js="exit-value-name"></p>
-        <div class="square-colors-selected" data-js="exit-colors"></div>
-        <table border="1">
+        <!-- exit name -->
+        <div class="exit-name">
+          <p class="exit-name__lead">Nome formatado:</p>
+          <div class="wrap-exit">
+            <p data-js="exit-value-name"></p>
+          </div>
+        </div>
+        <!-- / exit name -->
+        <!-- exit square -->
+        <div class="wrap-exit">
+          <div class="square-colors-selected" data-js="exit-colors"></div>
+        </div>
+        <!-- / exit square -->
+        <!-- exit table -->
+        <table border="1" class="table">
           <thead>
             <tr>
               <th>Imagem</th>
@@ -79,9 +98,12 @@
           <tbody data-js="table">
           </tbody>
         </table>
+        <!-- exit table -->
       </div>
-    </div>
+      <!-- / col -->
 
+    </div>
+    <!-- /wrap -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
