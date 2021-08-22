@@ -1,10 +1,8 @@
 
+import { $ } from './utils'
+
 const $inputPerson = $('[data-js="input-person"]')
 const $selectColor = $('[data-js="color-select"]')
-
-function $ (element) {
-  return document.querySelector(element)
-}
 
 function toUpperFirstCharAt (text) {
   return `${text.charAt(0).toUpperCase()}${text.slice(1)}`
