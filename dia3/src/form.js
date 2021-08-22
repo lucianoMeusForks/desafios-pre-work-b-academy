@@ -1,6 +1,10 @@
 
-const $inputPerson = document.querySelector('[data-js="input-person"]')
-const $selectColor = document.querySelector('[data-js="color-select"]')
+const $inputPerson = $('[data-js="input-person"]')
+const $selectColor = $('[data-js="color-select"]')
+
+function $ (element) {
+  return document.querySelector(element)
+}
 
 function toUpperFirstCharAt (text) {
   return `${text.charAt(0).toUpperCase()}${text.slice(1)}`
@@ -18,7 +22,7 @@ function transformText (value) {
 }
 
 function showText (el) {
-  const $exitValueDigited = document.querySelector('[data-js="exit-value-name"]')
+  const $exitValueDigited = $('[data-js="exit-value-name"]')
   $exitValueDigited.textContent = transformText(el.target.value)
 }
 
@@ -34,7 +38,7 @@ function createSquare (color) {
   const $squareColor = document.createElement('div')
   const $btnRemoveColor = document.createElement('button')
   const $boxColor = document.createElement('div')
-  const $exitColors = document.querySelector('[data-js="exit-colors"]')
+  const $exitColors = $('[data-js="exit-colors"]')
 
   // Box color
   $boxColor.setAttribute('data-js-namecolor', color)
