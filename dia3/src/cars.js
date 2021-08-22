@@ -32,9 +32,8 @@ function createText (value) {
 function createColor (value) {
   const td = $create('td')
   const div = $create('div')
-  div.style.width = '100px'
-  div.style.height = '100px'
-  div.style.background = value
+  div.classList.add('boxcolor-car')
+  div.style.setProperty('--boxcolor-car-bgc', value)
   td.appendChild(div)
   return td
 }

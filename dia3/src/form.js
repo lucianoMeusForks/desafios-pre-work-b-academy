@@ -48,6 +48,7 @@ function createSquare (color) {
 
   // Box color btn
   $btnRemoveColor.setAttribute('type', 'button')
+  $btnRemoveColor.classList.add('btn')
   $btnRemoveColor.classList.add('box-color__btn')
   $btnRemoveColor.textContent = 'excluir'
 
