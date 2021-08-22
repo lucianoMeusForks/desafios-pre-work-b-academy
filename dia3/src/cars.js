@@ -53,9 +53,9 @@ function createRow () {
 }
 
 const createItems = {
-  typetxt: (text) => createText(text),
-  typeimage: (pathImg) => createImage(pathImg),
-  typecolor: (color) => createColor(color)
+  typetxt: createText,
+  typeimage: createImage,
+  typecolor: createColor
 }
 
 $('[data-js="formcar"]').addEventListener('submit', (e) => {
