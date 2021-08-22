@@ -4,9 +4,72 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dia 4</title>
+    <title>Dia 3</title>
   </head>
   <body>
-    <script type="module" src="/main.js"></script>
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- col -->
+      <div>
+        <form action="" data-js="formcar">
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Cadastre seu carro</legend>
+            <div class="form-row">
+              <label class="form-label" for="image">Imagem</label>
+              <input id="image" type="text" name="image" data-js='typeimage' class="form-element">
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="brand-model">Marca / Modelo</label>
+              <input id="brand-model" type="text" name="brandModel" data-js='typetxt' class="form-element">
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="year">Ano</label>
+              <input id="year" type="number" name="year" data-js='typetxt' class="form-element">
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="plate">Placa</label>
+              <input id="plate" type="text" name="plate" data-js='typetxt' class="form-element">
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="color">Cor</label>
+              <input id="color" type="text" name="color" data-js='typecolor' class="form-element">
+            </div>
+
+            <div>
+              <button class="btn btn--form" type="submit">CADASTRAR</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <!-- / col -->
+
+      <!-- col -->
+      <div>
+
+        <!-- exit table -->
+        <table border="1" class="table">
+          <thead>
+            <tr>
+              <th>Imagem</th>
+              <th>Marca / Modelo</th>
+              <th>Ano</th>
+              <th>Placa</th>
+              <th>Cor</th>
+            </tr>
+          </thead>
+
+          <tbody data-js="table">
+          </tbody>
+        </table>
+        <!-- exit table -->
+      </div>
+      <!-- / col -->
+
+    </div>
+    <!-- /wrap -->
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
