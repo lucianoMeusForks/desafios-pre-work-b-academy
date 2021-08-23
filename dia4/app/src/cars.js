@@ -1,5 +1,12 @@
 import { $, $all, $create } from './utils'
 
+const BASE_URL = 'http://localhost:3333/cars'
+const createItems = {
+  typetxt: (text) => createText(text),
+  typeimage: (pathImg) => createImage(pathImg),
+  typecolor: (color) => createColor(color)
+}
+
 function getFormValue (fields){
   return Array.prototype.reduce.call(fields,
     function (acc, element) {
@@ -37,12 +44,9 @@ function createColor (value) {
   return td
 }
 
-function createRow () {
-  const fields = $all('[data-js="formcar"] input')
-  const dataForm = getFormValue(fields)
+function createRow (data) {
   const tr = $create('tr')
-
-  for (const row of dataForm) {
+  for (const row of data) {
     const { type, value } = row
     tr.appendChild(createItems[type](value))
   }
@@ -51,11 +55,16 @@ function createRow () {
 
 }
 
-const createItems = {
-  typetxt: (text) => createText(text),
-  typeimage: (pathImg) => createImage(pathImg),
-  typecolor: (color) => createColor(color)
+function createRowReq(data) {
+  const tr = $create('tr')
+
+  debugger
+  tr.appendChild(td)
+
+  return tr
 }
+
+
 
 $('[data-js="formcar"]').addEventListener('submit', (e) => {
   e.preventDefault()
@@ -63,8 +72,36 @@ $('[data-js="formcar"]').addEventListener('submit', (e) => {
   const firtsInput = fields[0]
   const table = $('[data-js="table')
 
-  table.appendChild(createRow())
+  table.appendChild(createRow(getFormValue(fields)))
 
   e.target.reset()
   firtsInput.focus()
 })
+//
+// function post() {
+//   fetch(BASE_URL, {
+//     method: 'post',
+//     headers: { 'content-type': 'application/json' },
+//     body: JSON.stringify({
+//       image: 'https://placeimg.com/100/100/any',
+//       brandModel: 'Vectra',
+//       year: parseInt('1988'),
+//       plate: 'a19875',
+//       color: 'red'
+//     })
+//   })
+//    .then((response) => response.json())
+//    .then((response) => console.log(response))
+// }
+
+function get() {
+  fetch(BASE_URL)
+   .then((response) => response.json())
+   .then((response) => createRowReq(response))
+}
+
+function main() {
+  get()
+}
+
+main()
